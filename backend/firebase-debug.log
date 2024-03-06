@@ -1,0 +1,370 @@
+[debug] [2024-03-06T19:21:39.775Z] ----------------------------------------------------------------------
+[debug] [2024-03-06T19:21:39.777Z] Command:       /opt/homebrew/Cellar/node/21.1.0/bin/node /opt/homebrew/bin/firebase init --debug
+[debug] [2024-03-06T19:21:39.777Z] CLI Version:   13.4.0
+[debug] [2024-03-06T19:21:39.777Z] Platform:      darwin
+[debug] [2024-03-06T19:21:39.777Z] Node Version:  v21.1.0
+[debug] [2024-03-06T19:21:39.777Z] Time:          Wed Mar 06 2024 11:21:39 GMT-0800 (Pacific Standard Time)
+[debug] [2024-03-06T19:21:39.778Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-03-06T19:21:39.782Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-06T19:21:39.783Z] > authorizing via signed-in user (youssef.qt1@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/youssefqteishat/Documents/JukeBox/backend
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-03-06T19:21:50.834Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-03-06T19:21:51.285Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-03-06T19:21:51.285Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project jukebox-92b0b (JukeBox) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2024-03-06T19:21:59.704Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/firebasedatabase.googleapis.com [none]
+[debug] [2024-03-06T19:21:59.704Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/jukebox-92b0b
+[debug] [2024-03-06T19:22:00.314Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/firebasedatabase.googleapis.com 200
+[debug] [2024-03-06T19:22:00.315Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/firebasedatabase.googleapis.com [omitted]
+[info] ✔  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2024-03-06T19:22:00.316Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/jukebox-92b0b/locations/-/instances/jukebox-92b0b-default-rtdb [none]
+[debug] [2024-03-06T19:22:00.800Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/jukebox-92b0b/locations/-/instances/jukebox-92b0b-default-rtdb 200
+[debug] [2024-03-06T19:22:00.801Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/jukebox-92b0b/locations/-/instances/jukebox-92b0b-default-rtdb {"name":"projects/550609089178/locations/us-central1/instances/jukebox-92b0b-default-rtdb","project":"projects/550609089178","databaseUrl":"https://jukebox-92b0b-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2024-03-06T19:22:07.730Z] >>> [apiv2][query] GET https://jukebox-92b0b-default-rtdb.firebaseio.com/.settings/rules.json [none]
+[debug] [2024-03-06T19:22:08.118Z] <<< [apiv2][status] GET https://jukebox-92b0b-default-rtdb.firebaseio.com/.settings/rules.json 200
+[debug] [2024-03-06T19:22:08.118Z] <<< [apiv2][body] GET https://jukebox-92b0b-default-rtdb.firebaseio.com/.settings/rules.json [stream]
+[info] ✔  Database Rules for jukebox-92b0b-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Firestore Setup
+[debug] [2024-03-06T19:22:08.123Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/firestore.googleapis.com [none]
+[debug] [2024-03-06T19:22:08.124Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/firestore.googleapis.com x-goog-quota-user=projects/jukebox-92b0b
+[debug] [2024-03-06T19:22:08.647Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/firestore.googleapis.com 200
+[debug] [2024-03-06T19:22:08.648Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/firestore.googleapis.com [omitted]
+[debug] [2024-03-06T19:22:08.648Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/jukebox-92b0b/databases/(default) [none]
+[debug] [2024-03-06T19:22:09.171Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/jukebox-92b0b/databases/(default) 200
+[debug] [2024-03-06T19:22:09.171Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/jukebox-92b0b/databases/(default) {"name":"projects/jukebox-92b0b/databases/(default)","uid":"2faf03c1-5876-4421-b075-00cb2f85132a","createTime":"2024-03-06T18:47:40.490828Z","updateTime":"2024-03-06T18:47:40.490828Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2024-03-06T18:47:40.490828Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"ILDF8v+t4IQDMIqSz+2p4IQD"}
+[debug] [2024-03-06T19:22:09.171Z] database_type: FIRESTORE_NATIVE
+[debug] [2024-03-06T19:22:09.172Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-06T19:22:09.172Z] > authorizing via signed-in user (youssef.qt1@gmail.com)
+[debug] [2024-03-06T19:22:09.173Z] [iam] checking project jukebox-92b0b for permissions ["firebase.projects.get"]
+[debug] [2024-03-06T19:22:09.173Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:testIamPermissions [none]
+[debug] [2024-03-06T19:22:09.173Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:testIamPermissions x-goog-quota-user=projects/jukebox-92b0b
+[debug] [2024-03-06T19:22:09.173Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-03-06T19:22:09.762Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:testIamPermissions 200
+[debug] [2024-03-06T19:22:09.762Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-03-06T19:22:44.791Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/jukebox-92b0b/releases pageSize=10&pageToken=
+[debug] [2024-03-06T19:22:45.395Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/jukebox-92b0b/releases 200
+[debug] [2024-03-06T19:22:45.396Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/jukebox-92b0b/releases {}
+[debug] [2024-03-06T19:22:45.396Z] No rulesets found, using default.
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-03-06T19:22:47.913Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/jukebox-92b0b/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2024-03-06T19:22:47.918Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/jukebox-92b0b/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2024-03-06T19:22:48.258Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/jukebox-92b0b/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2024-03-06T19:22:48.259Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/jukebox-92b0b/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/jukebox-92b0b/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[debug] [2024-03-06T19:22:48.260Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/jukebox-92b0b/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2024-03-06T19:22:48.260Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/jukebox-92b0b/databases/(default)/collectionGroups/-/indexes {}
+[info] 
+=== Functions Setup
+[debug] [2024-03-06T19:22:48.262Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-06T19:22:48.262Z] > authorizing via signed-in user (youssef.qt1@gmail.com)
+[debug] [2024-03-06T19:22:48.262Z] [iam] checking project jukebox-92b0b for permissions ["firebase.projects.get"]
+[debug] [2024-03-06T19:22:48.262Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:testIamPermissions [none]
+[debug] [2024-03-06T19:22:48.262Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:testIamPermissions x-goog-quota-user=projects/jukebox-92b0b
+[debug] [2024-03-06T19:22:48.262Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-03-06T19:22:48.528Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:testIamPermissions 200
+[debug] [2024-03-06T19:22:48.528Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-03-06T19:22:48.529Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-03-06T19:22:48.529Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/jukebox-92b0b
+[debug] [2024-03-06T19:22:48.531Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-03-06T19:22:48.531Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/jukebox-92b0b
+[debug] [2024-03-06T19:22:48.958Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/runtimeconfig.googleapis.com 200
+[debug] [2024-03-06T19:22:48.958Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-03-06T19:22:48.970Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/cloudfunctions.googleapis.com 200
+[debug] [2024-03-06T19:22:48.970Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] ✔  Wrote functions/package.json 
+[info] ✔  Wrote functions/.eslintrc.js 
+[info] ✔  Wrote functions/index.js 
+[info] ✔  Wrote functions/.gitignore 
+[info] 
+=== Hosting Setup
+[debug] [2024-03-06T19:23:12.154Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/jukebox-92b0b [none]
+[debug] [2024-03-06T19:23:12.342Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/jukebox-92b0b 200
+[debug] [2024-03-06T19:23:12.343Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/jukebox-92b0b {"projectId":"jukebox-92b0b","projectNumber":"550609089178","displayName":"JukeBox","name":"projects/jukebox-92b0b","resources":{"hostingSite":"jukebox-92b0b","realtimeDatabaseInstance":"jukebox-92b0b-default-rtdb"},"state":"ACTIVE","etag":"1_40d3be09-870b-4187-ace0-987b291524cf"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2024-03-06T19:24:28.185Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2024-03-06T19:24:28.265Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2024-03-06T19:24:28.265Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.8.1","browserURL":"https://www.gstatic.com/firebasejs/10.8.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.8.1/firebase.tgz"},"live":{"version":"10.8","browserURL":"https://www.gstatic.com/firebasejs/live/10.8/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.8/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.8.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.8.1/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/10.8.1/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/10.8.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.8.1/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.8.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.8.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.8.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.8.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.8.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.memory.js"}}
+[info] ✔  Wrote public/index.html 
+[info] 
+[info] i  Didn't detect a .git folder. Assuming /Users/youssefqteishat/Documents/JukeBox/backend is the project root. 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=960892324&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2024-03-06T19:24:31.349Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2024-03-06T19:24:31.350Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2024-03-06T19:24:31.865Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2024-03-06T19:24:31.865Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2024-03-06T19:24:31.875Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2024-03-06T19:24:32.204Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2024-03-06T19:24:32.204Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"youssef-qteishat","id":54677265,"node_id":"MDQ6VXNlcjU0Njc3MjY1","avatar_url":"https://avatars.githubusercontent.com/u/54677265?v=4","gravatar_id":"","url":"https://api.github.com/users/youssef-qteishat","html_url":"https://github.com/youssef-qteishat","followers_url":"https://api.github.com/users/youssef-qteishat/followers","following_url":"https://api.github.com/users/youssef-qteishat/following{/other_user}","gists_url":"https://api.github.com/users/youssef-qteishat/gists{/gist_id}","starred_url":"https://api.github.com/users/youssef-qteishat/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/youssef-qteishat/subscriptions","organizations_url":"https://api.github.com/users/youssef-qteishat/orgs","repos_url":"https://api.github.com/users/youssef-qteishat/repos","events_url":"https://api.github.com/users/youssef-qteishat/events{/privacy}","received_events_url":"https://api.github.com/users/youssef-qteishat/received_events","type":"User","site_admin":false,"name":"Youssef Qteishat","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":"CS Student @ UC Davis","twitter_username":null,"public_repos":11,"public_gists":0,"followers":6,"following":4,"created_at":"2019-08-29T15:02:12Z","updated_at":"2024-02-15T22:18:24Z","private_gists":0,"total_private_repos":7,"owned_private_repos":7,"disk_usage":8601,"collaborators":4,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as youssef-qteishat 
+[info] 
+[debug] [2024-03-06T19:26:05.018Z] >>> [apiv2][query] GET https://api.github.com/repos/youssef-qteishat/JukeBox/actions/secrets/public-key type=owner
+[debug] [2024-03-06T19:26:05.479Z] <<< [apiv2][status] GET https://api.github.com/repos/youssef-qteishat/JukeBox/actions/secrets/public-key 200
+[debug] [2024-03-06T19:26:05.480Z] <<< [apiv2][body] GET https://api.github.com/repos/youssef-qteishat/JukeBox/actions/secrets/public-key {"key_id":"3380204578043523366","key":"hiIf8crBTjEf+JW8q/+CpDixws4McrazLdAxIEP1ekU="}
+[debug] [2024-03-06T19:26:05.481Z] >>> [apiv2][query] GET https://api.github.com/repos/youssef-qteishat/JukeBox [none]
+[debug] [2024-03-06T19:26:06.006Z] <<< [apiv2][status] GET https://api.github.com/repos/youssef-qteishat/JukeBox 200
+[debug] [2024-03-06T19:26:06.006Z] <<< [apiv2][body] GET https://api.github.com/repos/youssef-qteishat/JukeBox {"id":768270807,"node_id":"R_kgDOLcrh1w","name":"JukeBox","full_name":"youssef-qteishat/JukeBox","private":false,"owner":{"login":"youssef-qteishat","id":54677265,"node_id":"MDQ6VXNlcjU0Njc3MjY1","avatar_url":"https://avatars.githubusercontent.com/u/54677265?v=4","gravatar_id":"","url":"https://api.github.com/users/youssef-qteishat","html_url":"https://github.com/youssef-qteishat","followers_url":"https://api.github.com/users/youssef-qteishat/followers","following_url":"https://api.github.com/users/youssef-qteishat/following{/other_user}","gists_url":"https://api.github.com/users/youssef-qteishat/gists{/gist_id}","starred_url":"https://api.github.com/users/youssef-qteishat/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/youssef-qteishat/subscriptions","organizations_url":"https://api.github.com/users/youssef-qteishat/orgs","repos_url":"https://api.github.com/users/youssef-qteishat/repos","events_url":"https://api.github.com/users/youssef-qteishat/events{/privacy}","received_events_url":"https://api.github.com/users/youssef-qteishat/received_events","type":"User","site_admin":false},"html_url":"https://github.com/youssef-qteishat/JukeBox","description":null,"fork":false,"url":"https://api.github.com/repos/youssef-qteishat/JukeBox","forks_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/forks","keys_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/keys{/key_id}","collaborators_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/teams","hooks_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/hooks","issue_events_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/issues/events{/number}","events_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/events","assignees_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/assignees{/user}","branches_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/branches{/branch}","tags_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/tags","blobs_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/git/refs{/sha}","trees_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/git/trees{/sha}","statuses_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/statuses/{sha}","languages_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/languages","stargazers_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/stargazers","contributors_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/contributors","subscribers_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/subscribers","subscription_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/subscription","commits_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/commits{/sha}","git_commits_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/git/commits{/sha}","comments_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/comments{/number}","issue_comment_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/issues/comments{/number}","contents_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/contents/{+path}","compare_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/compare/{base}...{head}","merges_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/merges","archive_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/downloads","issues_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/issues{/number}","pulls_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/pulls{/number}","milestones_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/milestones{/number}","notifications_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/labels{/name}","releases_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/releases{/id}","deployments_url":"https://api.github.com/repos/youssef-qteishat/JukeBox/deployments","created_at":"2024-03-06T19:25:40Z","updated_at":"2024-03-06T19:25:41Z","pushed_at":"2024-03-06T19:25:41Z","git_url":"git://github.com/youssef-qteishat/JukeBox.git","ssh_url":"git@github.com:youssef-qteishat/JukeBox.git","clone_url":"https://github.com/youssef-qteishat/JukeBox.git","svn_url":"https://github.com/youssef-qteishat/JukeBox","homepage":null,"size":0,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":null,"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"main","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"temp_clone_token":"","allow_squash_merge":true,"allow_merge_commit":true,"allow_rebase_merge":true,"allow_auto_merge":false,"delete_branch_on_merge":false,"allow_update_branch":false,"use_squash_pr_title_as_default":false,"squash_merge_commit_message":"COMMIT_MESSAGES","squash_merge_commit_title":"COMMIT_OR_PR_TITLE","merge_commit_message":"PR_TITLE","merge_commit_title":"MERGE_MESSAGE","security_and_analysis":{"secret_scanning":{"status":"disabled"},"secret_scanning_push_protection":{"status":"disabled"},"dependabot_security_updates":{"status":"disabled"},"secret_scanning_validity_checks":{"status":"disabled"}},"network_count":0,"subscribers_count":1}
+[debug] [2024-03-06T19:26:06.009Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/jukebox-92b0b/serviceAccounts [none]
+[debug] [2024-03-06T19:26:06.009Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/jukebox-92b0b/serviceAccounts {"accountId":"github-action-768270807","serviceAccount":{"displayName":"GitHub Actions (youssef-qteishat/JukeBox)","description":"A service account with permission to deploy to Firebase Hosting and Cloud Functions for the GitHub repository youssef-qteishat/JukeBox"}}
+[debug] [2024-03-06T19:26:07.053Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/jukebox-92b0b/serviceAccounts 200
+[debug] [2024-03-06T19:26:07.054Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/jukebox-92b0b/serviceAccounts [omitted]
+[debug] [2024-03-06T19:26:07.054Z] >>> [apiv2][query] GET https://iam.googleapis.com/v1/projects/jukebox-92b0b/serviceAccounts/github-action-768270807@jukebox-92b0b.iam.gserviceaccount.com [none]
+[debug] [2024-03-06T19:26:07.055Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:getIamPolicy [none]
+[debug] [2024-03-06T19:26:07.578Z] <<< [apiv2][status] GET https://iam.googleapis.com/v1/projects/jukebox-92b0b/serviceAccounts/github-action-768270807@jukebox-92b0b.iam.gserviceaccount.com 404
+[debug] [2024-03-06T19:26:07.579Z] <<< [apiv2][body] GET https://iam.googleapis.com/v1/projects/jukebox-92b0b/serviceAccounts/github-action-768270807@jukebox-92b0b.iam.gserviceaccount.com {"error":{"code":404,"message":"Service account projects/jukebox-92b0b/serviceAccounts/github-action-768270807@jukebox-92b0b.iam.gserviceaccount.com does not exist.","status":"NOT_FOUND"}}
+[debug] [2024-03-06T19:26:07.580Z] >>> [apiv2][query] GET https://iam.googleapis.com/v1/projects/jukebox-92b0b/serviceAccounts/github-action-768270807@jukebox-92b0b.iam.gserviceaccount.com/keys [none]
+[debug] [2024-03-06T19:26:07.582Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:getIamPolicy 200
+[debug] [2024-03-06T19:26:07.582Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:getIamPolicy {"version":1,"etag":"BwYTAsBAJgI=","bindings":[{"role":"roles/cloudfunctions.serviceAgent","members":["serviceAccount:service-550609089178@gcf-admin-robot.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:jukebox-92b0b@appspot.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com","serviceAccount:service-550609089178@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-l85am@jukebox-92b0b.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-550609089178@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/firestore.serviceAgent","members":["serviceAccount:service-550609089178@gcp-sa-firestore.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-l85am@jukebox-92b0b.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:youssef.qt1@gmail.com"]}]}
+[debug] [2024-03-06T19:26:08.100Z] <<< [apiv2][status] GET https://iam.googleapis.com/v1/projects/jukebox-92b0b/serviceAccounts/github-action-768270807@jukebox-92b0b.iam.gserviceaccount.com/keys 200
+[debug] [2024-03-06T19:26:08.101Z] <<< [apiv2][body] GET https://iam.googleapis.com/v1/projects/jukebox-92b0b/serviceAccounts/github-action-768270807@jukebox-92b0b.iam.gserviceaccount.com/keys {"keys":[{"name":"projects/jukebox-92b0b/serviceAccounts/github-action-768270807@jukebox-92b0b.iam.gserviceaccount.com/keys/de8bf352f689d448890daee8d089b6bd717de765","validAfterTime":"2024-03-06T19:26:06Z","validBeforeTime":"2026-03-11T02:13:35Z","keyAlgorithm":"KEY_ALG_RSA_2048","keyOrigin":"GOOGLE_PROVIDED","keyType":"SYSTEM_MANAGED"}]}
+[error] 
+[error] Error: HTTP Error: 404, Service account projects/jukebox-92b0b/serviceAccounts/github-action-768270807@jukebox-92b0b.iam.gserviceaccount.com does not exist.
+[debug] [2024-03-06T19:26:08.165Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 404,
+      "message": "Service account projects/jukebox-92b0b/serviceAccounts/github-action-768270807@jukebox-92b0b.iam.gserviceaccount.com does not exist.",
+      "status": "NOT_FOUND"
+    }
+  },
+  "response": {
+    "statusCode": 404
+  }
+}
+[debug] [2024-03-06T19:32:49.319Z] ----------------------------------------------------------------------
+[debug] [2024-03-06T19:32:49.327Z] Command:       /opt/homebrew/Cellar/node/21.1.0/bin/node /opt/homebrew/bin/firebase init
+[debug] [2024-03-06T19:32:49.328Z] CLI Version:   13.4.0
+[debug] [2024-03-06T19:32:49.328Z] Platform:      darwin
+[debug] [2024-03-06T19:32:49.328Z] Node Version:  v21.1.0
+[debug] [2024-03-06T19:32:49.328Z] Time:          Wed Mar 06 2024 11:32:49 GMT-0800 (Pacific Standard Time)
+[debug] [2024-03-06T19:32:49.328Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-03-06T19:32:49.333Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-06T19:32:49.334Z] > authorizing via signed-in user (youssef.qt1@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/youssefqteishat/Documents/JukeBox/backend
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-03-06T19:32:55.028Z] > refreshing access token with scopes: []
+[debug] [2024-03-06T19:32:55.031Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-03-06T19:32:55.031Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-03-06T19:32:55.646Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-03-06T19:32:55.646Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-03-06T19:32:55.658Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-03-06T19:32:55.975Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-03-06T19:32:55.975Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project jukebox-92b0b (JukeBox) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2024-03-06T19:32:57.214Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/firebasedatabase.googleapis.com [none]
+[debug] [2024-03-06T19:32:57.214Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/jukebox-92b0b
+[debug] [2024-03-06T19:32:57.664Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/firebasedatabase.googleapis.com 200
+[debug] [2024-03-06T19:32:57.664Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/firebasedatabase.googleapis.com [omitted]
+[info] ✔  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2024-03-06T19:32:57.666Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/jukebox-92b0b/locations/-/instances/jukebox-92b0b-default-rtdb [none]
+[debug] [2024-03-06T19:32:58.069Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/jukebox-92b0b/locations/-/instances/jukebox-92b0b-default-rtdb 200
+[debug] [2024-03-06T19:32:58.070Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/jukebox-92b0b/locations/-/instances/jukebox-92b0b-default-rtdb {"name":"projects/550609089178/locations/us-central1/instances/jukebox-92b0b-default-rtdb","project":"projects/550609089178","databaseUrl":"https://jukebox-92b0b-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2024-03-06T19:33:04.825Z] >>> [apiv2][query] GET https://jukebox-92b0b-default-rtdb.firebaseio.com/.settings/rules.json [none]
+[debug] [2024-03-06T19:33:05.588Z] <<< [apiv2][status] GET https://jukebox-92b0b-default-rtdb.firebaseio.com/.settings/rules.json 200
+[debug] [2024-03-06T19:33:05.589Z] <<< [apiv2][body] GET https://jukebox-92b0b-default-rtdb.firebaseio.com/.settings/rules.json [stream]
+[info] ✔  Database Rules for jukebox-92b0b-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Firestore Setup
+[debug] [2024-03-06T19:33:05.593Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/firestore.googleapis.com [none]
+[debug] [2024-03-06T19:33:05.593Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/firestore.googleapis.com x-goog-quota-user=projects/jukebox-92b0b
+[debug] [2024-03-06T19:33:06.115Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/firestore.googleapis.com 200
+[debug] [2024-03-06T19:33:06.117Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/firestore.googleapis.com [omitted]
+[debug] [2024-03-06T19:33:06.117Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/jukebox-92b0b/databases/(default) [none]
+[debug] [2024-03-06T19:33:06.500Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/jukebox-92b0b/databases/(default) 200
+[debug] [2024-03-06T19:33:06.501Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/jukebox-92b0b/databases/(default) {"name":"projects/jukebox-92b0b/databases/(default)","uid":"2faf03c1-5876-4421-b075-00cb2f85132a","createTime":"2024-03-06T18:47:40.490828Z","updateTime":"2024-03-06T18:47:40.490828Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2024-03-06T18:47:40.490828Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"IIfSs7mw4IQDMIqSz+2p4IQD"}
+[debug] [2024-03-06T19:33:06.501Z] database_type: FIRESTORE_NATIVE
+[debug] [2024-03-06T19:33:06.502Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-06T19:33:06.502Z] > authorizing via signed-in user (youssef.qt1@gmail.com)
+[debug] [2024-03-06T19:33:06.502Z] [iam] checking project jukebox-92b0b for permissions ["firebase.projects.get"]
+[debug] [2024-03-06T19:33:06.503Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:testIamPermissions [none]
+[debug] [2024-03-06T19:33:06.503Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:testIamPermissions x-goog-quota-user=projects/jukebox-92b0b
+[debug] [2024-03-06T19:33:06.503Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-03-06T19:33:06.693Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:testIamPermissions 200
+[debug] [2024-03-06T19:33:06.693Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-03-06T19:33:09.448Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/jukebox-92b0b/releases pageSize=10&pageToken=
+[debug] [2024-03-06T19:33:10.311Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/jukebox-92b0b/releases 200
+[debug] [2024-03-06T19:33:10.312Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/jukebox-92b0b/releases {}
+[debug] [2024-03-06T19:33:10.313Z] No rulesets found, using default.
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-03-06T19:33:12.779Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/jukebox-92b0b/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2024-03-06T19:33:12.783Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/jukebox-92b0b/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2024-03-06T19:33:13.463Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/jukebox-92b0b/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2024-03-06T19:33:13.463Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/jukebox-92b0b/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2024-03-06T19:33:13.464Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/jukebox-92b0b/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2024-03-06T19:33:13.464Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/jukebox-92b0b/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/jukebox-92b0b/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] 
+=== Functions Setup
+[debug] [2024-03-06T19:33:13.466Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-06T19:33:13.466Z] > authorizing via signed-in user (youssef.qt1@gmail.com)
+[debug] [2024-03-06T19:33:13.466Z] [iam] checking project jukebox-92b0b for permissions ["firebase.projects.get"]
+[debug] [2024-03-06T19:33:13.466Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:testIamPermissions [none]
+[debug] [2024-03-06T19:33:13.466Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:testIamPermissions x-goog-quota-user=projects/jukebox-92b0b
+[debug] [2024-03-06T19:33:13.466Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-03-06T19:33:13.630Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:testIamPermissions 200
+[debug] [2024-03-06T19:33:13.631Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/jukebox-92b0b:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-03-06T19:33:13.631Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-03-06T19:33:13.631Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/jukebox-92b0b
+[debug] [2024-03-06T19:33:13.633Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-03-06T19:33:13.633Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/jukebox-92b0b
+[debug] [2024-03-06T19:33:14.319Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/runtimeconfig.googleapis.com 200
+[debug] [2024-03-06T19:33:14.319Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-03-06T19:33:14.320Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/cloudfunctions.googleapis.com 200
+[debug] [2024-03-06T19:33:14.320Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/jukebox-92b0b/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] ✔  Wrote functions/package.json 
+[info] ✔  Wrote functions/.eslintrc.js 
+[info] ✔  Wrote functions/index.js 
+[info] ✔  Wrote functions/.gitignore 
+[info] 
+=== Hosting Setup
+[debug] [2024-03-06T19:33:27.247Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/jukebox-92b0b [none]
+[debug] [2024-03-06T19:33:27.725Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/jukebox-92b0b 200
+[debug] [2024-03-06T19:33:27.725Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/jukebox-92b0b {"projectId":"jukebox-92b0b","projectNumber":"550609089178","displayName":"JukeBox","name":"projects/jukebox-92b0b","resources":{"hostingSite":"jukebox-92b0b","realtimeDatabaseInstance":"jukebox-92b0b-default-rtdb"},"state":"ACTIVE","etag":"1_40d3be09-870b-4187-ace0-987b291524cf"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2024-03-06T19:33:34.473Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2024-03-06T19:33:34.523Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2024-03-06T19:33:34.524Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.8.1","browserURL":"https://www.gstatic.com/firebasejs/10.8.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.8.1/firebase.tgz"},"live":{"version":"10.8","browserURL":"https://www.gstatic.com/firebasejs/live/10.8/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.8/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.8.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.8.1/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/10.8.1/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/10.8.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.8.1/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.8.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.8.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.8.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.8.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.8.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.memory.js"}}
+[info] ✔  Wrote public/index.html 
+[info] 
+[info] i  Didn't detect a .git folder. Assuming /Users/youssefqteishat/Documents/JukeBox/backend is the project root. 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=283090912&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2024-03-06T19:33:36.679Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2024-03-06T19:33:36.679Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2024-03-06T19:33:37.118Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2024-03-06T19:33:37.118Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2024-03-06T19:33:37.135Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2024-03-06T19:33:37.568Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2024-03-06T19:33:37.569Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"youssef-qteishat","id":54677265,"node_id":"MDQ6VXNlcjU0Njc3MjY1","avatar_url":"https://avatars.githubusercontent.com/u/54677265?v=4","gravatar_id":"","url":"https://api.github.com/users/youssef-qteishat","html_url":"https://github.com/youssef-qteishat","followers_url":"https://api.github.com/users/youssef-qteishat/followers","following_url":"https://api.github.com/users/youssef-qteishat/following{/other_user}","gists_url":"https://api.github.com/users/youssef-qteishat/gists{/gist_id}","starred_url":"https://api.github.com/users/youssef-qteishat/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/youssef-qteishat/subscriptions","organizations_url":"https://api.github.com/users/youssef-qteishat/orgs","repos_url":"https://api.github.com/users/youssef-qteishat/repos","events_url":"https://api.github.com/users/youssef-qteishat/events{/privacy}","received_events_url":"https://api.github.com/users/youssef-qteishat/received_events","type":"User","site_admin":false,"name":"Youssef Qteishat","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":"CS Student @ UC Davis","twitter_username":null,"public_repos":12,"public_gists":0,"followers":6,"following":4,"created_at":"2019-08-29T15:02:12Z","updated_at":"2024-02-15T22:18:24Z","private_gists":0,"total_private_repos":7,"owned_private_repos":7,"disk_usage":8601,"collaborators":4,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as youssef-qteishat 
+[info] 
+[debug] [2024-03-06T19:33:57.802Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-03-06T19:33:58.581Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2024-03-06T19:33:58.581Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] ⚠  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-03-06T19:35:38.514Z] >>> [apiv2][query] GET https://api.github.com/repos/Hackingsimulator/JukeBox/actions/secrets/public-key type=owner
+[debug] [2024-03-06T19:35:39.005Z] <<< [apiv2][status] GET https://api.github.com/repos/Hackingsimulator/JukeBox/actions/secrets/public-key 403
+[debug] [2024-03-06T19:35:39.005Z] <<< [apiv2][body] GET https://api.github.com/repos/Hackingsimulator/JukeBox/actions/secrets/public-key {"message":"Must have admin rights to Repository.","documentation_url":"https://docs.github.com/rest/actions/secrets#get-a-repository-public-key"}
+[info] 
+[info] 
+[error] ⚠  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
